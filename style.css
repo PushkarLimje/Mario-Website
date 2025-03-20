@@ -1,0 +1,165 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    position:fixed;
+    background-color: crimson;
+    width: 100%;
+    z-index: 1;                               /*brings the heading from back of the photo*/
+    text-align: center;
+    font-size: larger;
+    padding: 20px;
+}
+header h1{
+    padding: 6px 12px;                      /*1st is for top & bottm and 2nd is for left & right */
+    color:  white ;
+    border: 8px white solid;
+    display: inline-block;                  /* it is use to convert line into block  */
+    border-radius: 36px;
+}
+
+.banner{
+    position: relative;
+}
+.banner img{
+    max-width: 100%;                                    /* image takes the fullscreen */
+}
+.banner .welcome{
+     background-color: #feb614;
+     color: white;
+     padding: 30px; 
+     position :absolute;                            /*when we use aboslute, the area gets delete and the thing under this gets on the another one's position */
+     left:0%;                                       
+     top: 30%;
+}
+.banner h2{
+    font-size: 73px;
+}
+.banner h2 span{
+    font-size: 1.3em;               /*it is use to amplify itself from the parent tag by  (1.3x)*/
+} 
+nav {
+    position: sticky;              /* when we scroll the page the ul tag gets stick to the the heading which is fixed*/
+    left: 30px;
+    background-color: #f4f4f4;
+    padding: 20px;        
+    top: 108px;              
+}
+nav ul{
+    white-space: nowrap;            /*it is used wrap next line element to same line */
+    max-width: 1200px;
+    margin: 0 auto;  
+                
+}
+nav li{
+    width: 25%;
+    display: inline-block;
+    font-size: 24px;
+}
+nav li a {
+    text-decoration: none;
+    color:#4b4b4b ;
+}
+nav li a.join{
+    color: #f63232;
+}
+main{
+    max-width: 100%;                     /*when the pixel <1200px then it would take 100%*/
+    width: 1200px;                      /*suppose when the screen pixel is 2000px wide then it would take 1200px */
+    
+    margin: 80px auto;               /*margin get automatically gets distributed in left and right*/
+    padding:0  40px;                  /*both left and right*/
+
+    box-sizing: border-box;             /*it heps to inclusive the padding inside width*/
+}
+article h2{
+    color: #f63232;
+    font-size: 48px;
+}
+article p {
+    line-height: 2em;               /* it apmlyfies the default gaps i.e 16px to 2 times*/
+    color: #4b4b4b;
+}
+.images {
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+.images li{
+    display: inline-block;
+    width: 40%;
+    margin: 20px 5%;
+
+}
+.images li img{
+    max-width: 100%;
+}
+section.join {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4b4b4b;
+
+}
+.join h2{
+    font-size: 36px;
+}
+form input{
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius:  28px; 
+    border: 4px solid white;
+}
+footer{
+    background-color: #f63232;
+    color: white;
+    padding: 40px 200px;
+    text-align: center;
+    font-size: larger;
+}
+
+/*  PSEUDO CLASSES AND ELEMENTS*/
+
+nav li a:hover{                                     /*hover is used when we put the cursor o that tag */
+    text-decoration: underline;
+    background-color: pink;
+    padding: 3px;
+}
+.images li:hover{
+    position: relative;
+    top: -8px;
+}
+form input:focus{
+    border: 4px dashed #4b4b4b;
+    outline: none;                          /*it clears the default outline*/
+
+}
+form input:valid{                           /* when we put the gmail ,border turns green*/
+    border: 4px solid #71d300;
+}
+
+/* nav li:first-child{                             we can also use this pseudo class 
+    background-color: burlywood;
+} */
+article p::first-line {                     /*targets the first line of the paragraph*/
+    font-weight: bold;
+    font-size: 1.3em;
+}
+p::first-letter{
+    font-size: 1.5em;                       /*targets the first letter of the p tag*/
+}
+p::selection{                               /*when we select the letter it changes the color */
+    background-color: black;
+    color: #ff0b0b;
+}
+p::after{
+    content: '......';                       /*it add the content after the end of the p tag*/
+}
+/*  
+p::before{
+content:'hello   '                           it add before the p tag 
+}
+*/
